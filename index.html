@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detona Ralph RPG</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu-time">
+                <h2>Tempo Restante:</h2>
+                <span id="time-left">60</span>
+            </div>
+            <div class="menu-score">
+                <h2>Pontuação:</h2>
+                <span id="score">0</span>
+            </div>
+        </div>
+
+        <div class="player-stats">
+            <div class="health-container">
+                <h2>Vida:</h2>
+                <div class="health-bar-container">
+                    <div id="health-bar" class="health-bar"></div>
+                </div>
+                <span id="health-text">100/100</span>
+            </div>
+            <div class="player-level">
+                <h2>Nível do Jogador:</h2>
+                <span id="player-level">1</span>
+            </div>
+            <div class="player-xp">
+                <h2>XP:</h2>
+                <div class="xp-bar-container">
+                    <div id="xp-bar" class="xp-bar"></div>
+                </div>
+                <span id="xp-text">0/100</span>
+            </div>
+        </div>
+
+        <div class="abilities-container">
+            <h2>Habilidades:</h2>
+            <div class="abilities-list" id="abilities-list">
+                <!-- Habilidades serão adicionadas aqui dinamicamente -->
+                <div class="ability-empty">Nenhuma habilidade adquirida</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-row">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+        </div>
+
+        <div class="tutorial" id="tutorial">
+            <div class="tutorial-content">
+                <h2>Como Jogar Detona Ralph RPG</h2>
+                <p>Clique no Ralph quando ele aparecer para ganhar pontos e experiência!</p>
+                <p>Cuidado! Inimigos podem atacar e reduzir sua vida se você não os acertar a tempo.</p>
+                <p>Inimigos especiais causam mais dano, mas dão mais pontos e experiência!</p>
+                <p>Suba de nível para aumentar seu dano e recuperar vida!</p>
+                
+                <h3>Novidades:</h3>
+                <p>A cada 5 níveis, você enfrentará um chefe poderoso!</p>
+                <p>Também a cada 5 níveis, uma loja aparecerá onde você pode comprar habilidades especiais!</p>
+                
+                <h3>Power-ups:</h3>
+                <ul>
+                    <li><span class="powerup-icon slow">⏱️</span> Tempo Lento: Reduz a velocidade do jogo</li>
+                    <li><span class="powerup-icon double">2️⃣</span> Pontos Dobrados: Dobra os pontos por acerto</li>
+                    <li><span class="powerup-icon time">⏰</span> Tempo Extra: Adiciona 10 segundos</li>
+                    <li><span class="powerup-icon heal">❤️</span> Cura: Recupera parte da sua vida</li>
+                    <li><span class="powerup-icon shield">🛡️</span> Escudo: Protege contra o próximo ataque</li>
+                </ul>
+                <button id="start-game">Iniciar Jogo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/scripts/engine.js"></script>
+</body>
+</html>
